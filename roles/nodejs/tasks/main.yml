@@ -1,0 +1,13 @@
+- name: Add yum repo on another host
+  become: yes
+  yum_repository:
+   name: node
+   description: node repo
+   baseurl: https://rpm.nodesource.com/pub_7.x/el/6/x86_64/
+   gpgcheck: no
+
+- name: Install node
+  become: yes
+  yum:
+   name: nodejs-7.10.0
+   state: present
