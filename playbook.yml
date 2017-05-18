@@ -1,13 +1,13 @@
 ---
 - hosts: webservers
   vars_files:
-   - ./vars/webservers_config.yml
+   - ./config/webservers.yml
   roles:
     - nodejs
     - nginx
 
 - hosts: anotherWebserver
   vars_files:
-    - ./vars/anotherWebservers_config.yml
+    - ./config/anotherWebservers.yml
   roles:
     - nodejs
