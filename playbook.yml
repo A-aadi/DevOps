@@ -4,8 +4,7 @@
    - ./config/webservers.yml
 
   roles:
-    - nodejs
-    - nginx
+    - webserverOne
 
 - hosts: anotherWebserver
   vars_files:
