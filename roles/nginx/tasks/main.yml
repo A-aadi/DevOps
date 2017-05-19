@@ -4,6 +4,7 @@
     name: nginx
     state: present
   notify: Restart nginx
+- meta: flush_handlers
 
 - name: change port
   become: yes
