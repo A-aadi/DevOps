@@ -2,6 +2,7 @@
 - hosts: webservers
   vars_files:
    - ./config/webservers.yml
+
   roles:
     - nodejs
     - nginx
