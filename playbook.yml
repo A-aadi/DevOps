@@ -2,12 +2,15 @@
 - hosts: webservers
   vars_files:
    - ./config/webservers.yml
-
+   - ./config/sqlPass.yml
   roles:
     - webserverOne
+  tasks:
+    - debug:
+       var: sql_password
 
 - hosts: anotherWebserver
   vars_files:
     - ./config/anotherWebservers.yml
   roles:
-    - nodejs
+    - webserverTwo
